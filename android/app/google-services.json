@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "793271240901",
+    "project_id": "ibn-sina-app-dd53f",
+    "storage_bucket": "ibn-sina-app-dd53f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:793271240901:android:ddb3a48d0f6f7b27b848ac",
+        "android_client_info": {
+          "package_name": "ibn.sina.com"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHH6Y7ASUvZqALZvKU9Y4fbXgbkhrf3bs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
