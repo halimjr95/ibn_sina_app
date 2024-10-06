@@ -1,4 +1,5 @@
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
@@ -10,20 +11,36 @@ import 'core/utils/size_config.dart';
 import 'view/splash/splash_screen.dart';
 
 void main() async {
+  // WidgetsFlutterBinding.ensureInitialized();
+  // await Firebase.initializeApp(
+  //     options: FirebaseOptions(
+  //       apiKey: "AIzaSyCHnDWAr4RPsE1ucWijsiY0Mm-GIVy-kEM",
+  //       authDomain: "ibn-sina-app-dd53f.firebaseapp.com",
+  //       projectId: "ibn-sina-app-dd53f",
+  //       storageBucket: "ibn-sina-app-dd53f.appspot.com",
+  //       messagingSenderId: "793271240901",
+  //       appId: "1:793271240901:web:1f51e03079f697fab848ac",
+  //       measurementId: "G-NX2MM0WY9F"
+  //     )
+  // );
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-      options: FirebaseOptions(
-        apiKey: 'AIzaSyAHH6Y7ASUvZqALZvKU9Y4fbXgbkhrf3bs',
-        appId: '1:793271240901:android:ddb3a48d0f6f7b27b848ac',
-        messagingSenderId: '793271240901',
-        projectId: 'ibn-sina-app-dd53f',
-        storageBucket: 'ibn-sina-app-dd53f.appspot.com',
-      )
-  );
+  await Firebase.initializeApp();
 
   await GetStorage.init();
+  FirebaseMessaging messaging = FirebaseMessaging.instance;
 
-  notificationHandler();
+  NotificationSettings settings = await messaging.requestPermission(
+    alert: true,
+    announcement: false,
+    badge: true,
+    carPlay: false,
+    criticalAlert: false,
+    provisional: false,
+    sound: true,
+  );
+
+
+  // notificationHandler();
 
   SizeConfig();
   // GetStorage().write('isActivity', false);

@@ -1,4 +1,4 @@
-package ibn.sina.com
+package ibn.sina.ios.com
 
 import io.flutter.embedding.android.FlutterActivity
 

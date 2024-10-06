@@ -25,7 +25,7 @@ class DoctorsScreen extends StatelessWidget {
               centerTitle: true,
               backgroundColor: Colors.grey[50],
               iconTheme: IconThemeData(
-                color: MainColor,
+                color: MainColor2,
                 size: 30.0,
               ),
             ),
